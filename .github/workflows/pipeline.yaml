@@ -4,12 +4,14 @@ on:
   schedule:
     - cron: '* * * * *'
 
-run-on: ubuntu-latest
-steps:
-  - name: 'Checkout codes'
-    uses: actions/checkout@v1
+jobs:
+  job1:
+    run-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
 
-  - name: 'Get wather report'
-    run: bash ./weather.sh
+      - name: 'Get wather report'
+        run: bash ./weather.sh
 
 
