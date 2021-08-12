@@ -3,13 +3,13 @@ on:
   push:
   schedule:
     - cron: '* * * * *'
-runs-on: ubuntu-latest
 
 jobs:
   job1:
+    runs-on: ubuntu-latest
     steps:
       - name: 'Checkout codes'
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: 'Get wather report'
         run: bash ./weather.sh
