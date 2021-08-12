@@ -6,12 +6,10 @@ on:
 run-on: ubuntu-latest
 
 jobs:
-  - job1:
+  job1:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
 
       - name: 'Get wather report'
         run: bash ./weather.sh
-
-
