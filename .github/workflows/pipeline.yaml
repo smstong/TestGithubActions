@@ -3,10 +3,10 @@ on:
   push:
   schedule:
     - cron: '* * * * *'
+run-on: ubuntu-latest
 
 jobs:
-  job1:
-    run-on: ubuntu-latest
+  - job1:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
