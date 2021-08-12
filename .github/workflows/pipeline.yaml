@@ -1,0 +1,15 @@
+name: 'Github actions test'
+on:
+  push:
+  schedule:
+    - cron: '* * * * *'
+
+run-on: ubuntu-latest
+steps:
+  - name: 'Checkout codes'
+    uses: actions/checkout@v1
+
+  - name: 'Get wather report'
+    run: bash ./weather.sh
+
+
